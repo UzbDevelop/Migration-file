@@ -4,7 +4,22 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="0" author="admin">
-
+    <changeSet id="4" author="Alisher">
+        <!--        <createTable tableName="usersss">-->
+        <!--            <column name="id" type="bigserial">-->
+        <!--                <constraints primaryKey="true"></constraints>-->
+        <!--            </column>-->
+        <!--            <column name="username" type="varchar"></column>-->
+        <!--            <column name="email" type="varchar"></column>-->
+        <!--        </createTable>-->
+        <sql>
+            CREATE TABLE users
+            (
+                id       bigserial PRIMARY KEY,
+                username varchar,
+                email    varchar,
+                password varchar
+            )
+        </sql>
     </changeSet>
 </databaseChangeLog>

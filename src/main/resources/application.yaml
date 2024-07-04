@@ -1,14 +1,14 @@
 spring:
   application:
-    name=migration
+    name: migration
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: /
-    jpa:
-      hibernate:
-        ddl-auto: validate
-      show-sql: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
   liquibase:
     change-log: classpath:db/changelog/changelog.xml
